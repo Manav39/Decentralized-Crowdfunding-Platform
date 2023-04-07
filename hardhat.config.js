@@ -1,12 +1,17 @@
 require('@nomiclabs/hardhat-waffle')
 require('dotenv').config()
 
+
 module.exports = {
-  defaultNetwork: 'localhost',
+  efaultNetwork: 'localhost',
   networks: {
     localhost: {
       url: 'http://127.0.0.1:8545',
     },
+    sepolia:{
+      url:process.env.ALCHEMY,
+      accounts:[process.env.SEPOLIA]
+    }
   },
   solidity: {
     version: '0.8.11',

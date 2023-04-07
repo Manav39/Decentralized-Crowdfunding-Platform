@@ -15,7 +15,6 @@ const BackProject = ({ project }) => {
     await backProject(project?.id, amount)
     toast.success('Project backed successfully')
     setGlobalState('backModal', 'scale-0')
-    window.location.reload()
   }
 
   return (

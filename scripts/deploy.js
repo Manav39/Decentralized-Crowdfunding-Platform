@@ -1,10 +1,10 @@
 const hre = require('hardhat')
 const fs = require('fs')
+require('dotenv').config()
 
 async function main() {
-  const taxFee = 5
   const Contract = await hre.ethers.getContractFactory('Versura')
-  const contract = await Contract.deploy(taxFee)
+  const contract = await Contract.deploy()
 
   await contract.deployed()
 
@@ -22,3 +22,18 @@ main().catch((error) => {
   console.error(error)
   process.exitCode = 1
 })
+
+// async function main() {
+//   const [deployer] = await ethers.getSigners();
+
+//   const Token = await ethers.getContractFactory("Versura");
+//   const token = await Token.deploy();
+//   console.log("Token address:", token.address);
+// }
+
+// main()
+//   .then(() => process.exit(0))
+//   .catch((error) => {
+//     console.error(error);
+//     process.exit(1);
+//   });

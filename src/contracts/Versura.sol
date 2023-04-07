@@ -60,9 +60,9 @@ contract Versura {
         uint256 timestamp
     );
 
-    constructor(uint256 _projectTax) {
+    constructor() {
         owner = msg.sender;
-        projectTax = _projectTax;
+        
     }
 
     function createProject(
