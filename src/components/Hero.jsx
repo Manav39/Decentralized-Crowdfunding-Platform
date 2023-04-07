@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { setGlobalState, useGlobalState } from '../store'
 const Hero = () => {
   const [stats] = useGlobalState('stats')
@@ -23,7 +24,7 @@ const Hero = () => {
           Add Project
         </button>
 
-        <button
+       <a href="#projects"><button
           type="button"
           className="inline-block px-6 py-2.5 border border-green-600
         font-medium text-xs leading-tight uppercase text-white-600
@@ -31,7 +32,7 @@ const Hero = () => {
         hover:text-white"
         >
           Back Projects
-        </button>
+        </button></a>
       </div>
 
       <div className="flex justify-center items-center mt-10">
