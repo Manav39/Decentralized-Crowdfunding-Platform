@@ -253,4 +253,8 @@ contract Versura {
         (bool success, ) = payable(to).call{value: amount}("");
         require(success);
     }
+
+    function MyProjects(address connectedAddress) public view returns(projectStruct[] memory){
+        return projectsOf[connectedAddress];
+    }
 }

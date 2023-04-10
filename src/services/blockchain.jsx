@@ -1,6 +1,6 @@
 import abi from '../abis/src/contracts/Versura.sol/Versura.json'
 import address from '../abis/contractAddress.json'
-import { getGlobalState, setGlobalState } from '../store'
+import { getGlobalState, setGlobalState, useGlobalState } from '../store'
 import { ethers } from 'ethers'
 
 const { ethereum } = window
@@ -114,7 +114,7 @@ const loadProjects = async () => {
     const contract = await getEtheriumContract()
     const projects = await contract.getProjects()
     const stats = await contract.stats()
-
+    console.log(projects)
     setGlobalState('stats', structureStats(stats))
     setGlobalState('projects', structuredProjects(projects))
   } catch (error) {
@@ -231,6 +231,20 @@ const reportError = (error) => {
   throw new Error('No ethereum object.')
 }
 
+const MyAddedProjects=async(connectedAccount)=>{
+  
+  try {
+    if (!ethereum) return alert('Please install Metamask')
+
+    const contract = await getEtheriumContract()
+    const projects = await contract.MyProjects(connectedAccount)
+    setGlobalState('myProj', structuredProjects(projects))
+  } catch (error) {
+    reportError(error)
+  }
+}
+
+
 export {
   connectWallet,
   isWallectConnected,
@@ -242,4 +256,5 @@ export {
   backProject,
   getBackers,
   payoutProject,
+  MyAddedProjects
 }
