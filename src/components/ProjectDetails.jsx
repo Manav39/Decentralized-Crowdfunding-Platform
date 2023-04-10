@@ -84,7 +84,7 @@ const ProjectDetails = ({ project }) => {
                 ></div>
               </div>
 
-              <div className="flex justify-between items-center font-bold mt-2">
+              <div className="flex justify-between items-center font-bold mt-2 text-white">
                 <small>{project?.raised} ETH Raised</small>
                 <small className="flex justify-start items-center">
                   <FaEthereum />
