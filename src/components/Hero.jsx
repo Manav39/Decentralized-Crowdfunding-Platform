@@ -13,6 +13,7 @@ const Hero = () => {
         <br />
         <span className="uppercase text-green-600">versura.</span>
       </h1>
+      <br/>
       <div className="flex justify-center items-center space-x-2">
         <button
           type="button"
@@ -34,7 +35,7 @@ const Hero = () => {
           Back Projects
         </button></a>
       </div>
-
+      <br/><br/>
       <div className="flex justify-center items-center mt-10">
         <div
           className="flex flex-col justify-center items-center

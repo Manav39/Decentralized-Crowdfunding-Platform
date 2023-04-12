@@ -19,8 +19,8 @@ const Header = () => {
         <span><img src={versura} alt="title" width={150} height={150}/></span>
         <TbBusinessplan />
       </Link>
-
       <div className="flex space-x-2 justify-center">
+        
         {connectedAccount ? (
           <Link to = '/myprojects'><button
             type="button"

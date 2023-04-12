@@ -3,7 +3,7 @@ require('dotenv').config()
 
 
 module.exports = {
-  efaultNetwork: 'localhost',
+  defaultNetwork: 'localhost',
   networks: {
     localhost: {
       url: 'http://127.0.0.1:8545',
@@ -11,6 +11,10 @@ module.exports = {
     sepolia:{
       url:process.env.ALCHEMY,
       accounts:[process.env.SEPOLIA]
+    },
+    mumbai:{
+      url:process.env.URL,
+      accounts:[process.env.POLYGON]
     }
   },
   solidity: {

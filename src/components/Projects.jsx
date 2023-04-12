@@ -17,6 +17,7 @@ const Projects = ({ projects }) => {
 
   return (
     <div className="flex flex-col px-6 mb-7">
+      <center><span className='text-4xl text-white'>Projects ({projects.length})</span></center>
       <div className="flex justify-center items-center flex-wrap">
         {collection.map((project, i) => (
           <ProjectCard key={i} project={project} />
